@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""""
+"""The console for AirBnB clone, hbnb"""
 import cmd
 from models import storage
 from models.base_model import BaseModel
@@ -14,7 +14,7 @@ import shlex
 
 
 class HBNBCommand(cmd.Cmd):
-    """"""
+    """ Class for the command interpreter. This is the entry point"""
 
     prompt = "(hbnb) "
     l_classes = ['BaseModel', 'User', 'Amenity',
@@ -33,15 +33,15 @@ class HBNBCommand(cmd.Cmd):
         return arg
 
     def help_help(self):
-        """"""
+        """ Provides description of  given command """
         print("Provides description of a given command")
 
     def emptyline(self):
-        """"""
+        """ Handles empty spaces when you press ENTER """
         pass
 
     def do_count(self, cls_name):
-        """"""
+        """Counts all written commands"""
         count = 0
         all_objs = storage.all()
         for k, v in all_objs.items():
@@ -51,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
         print(count)
 
     def do_create(self, type_model):
-        """"""
+        """Creates and saves new instances of BaseModel and prints id"""
 
         if not type_model:
             print("** class name missing **")
@@ -66,7 +66,7 @@ class HBNBCommand(cmd.Cmd):
             my_model.save()
 
     def do_show(self, arg):
-        """"""
+        """Prints the string repesentation of the instance based on class name and id"""
 
         if not arg:
             print("** class name missing **")
@@ -89,7 +89,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_destroy(self, arg):
-        """"""
+        """ Deletes an instance based on the class name and id"""
 
         if not arg:
             print("** class name missing **")
@@ -114,7 +114,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_all(self, arg):
-        """"""
+        """ Print all string representations of all instaces based or not on the class name"""
 
         if not arg:
             print("** class name missing **")
@@ -134,7 +134,7 @@ class HBNBCommand(cmd.Cmd):
             print(list_instances)
 
     def do_update(self, arg):
-        """"""
+        """ Updates an instance based on the class name and id"""
 
         if not arg:
             print("** class name missing **")
@@ -167,11 +167,11 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_quit(self, line):
-        """"""
+        """ Quit command to exit the program"""
         return True
 
     def do_EOF(self, line):
-        """"""
+        """ EOF command to exit the program"""
         return True
 
 

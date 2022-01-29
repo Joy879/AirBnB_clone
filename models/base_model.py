@@ -1,17 +1,19 @@
 #!/usr/bin/python3
+"""
+Contains the class BaseModel
+"""
+
 import uuid
 from datetime import datetime
 from models import storage
-"""
-"""
 
 
 class BaseModel():
-    """
+    """ base model used for other classes
     """
 
     def __init__(self, *args, **kwargs):
-        """
+        """ Initializes the BaseModel
         """
         if not kwargs:
             self.id = str(uuid.uuid4())
@@ -26,20 +28,20 @@ class BaseModel():
                     setattr(self, key, value)
 
     def __str__(self):
-        """
+        """ Prints the string representation of the BaseModel
         """
         class_name = "[" + self.__class__.__name__ + "]"
         dtn = {x: y for (x, y) in self.__dict__.items() if (not y) is False}
         return class_name + "(" + self.id + ")" + str(dtn)
 
     def save(self):
-        """
+        """ Updates the public instance attribute updated_at with the current datetime
         """
         self.updated_at = datetime.now()
         storage.save()
 
     def to_dict(self):
-        """
+        """ returns a dictionary containing all keys/values of __dict__
         """
         new_dict = {}
         for key, values in self.__dict__.items():
