@@ -66,7 +66,9 @@ class HBNBCommand(cmd.Cmd):
             my_model.save()
 
     def do_show(self, arg):
-        """Prints the string repesentation of the instance based on class name and id"""
+        """
+        Prints the string representation of an instance based on class name
+        """
 
         if not arg:
             print("** class name missing **")
@@ -114,7 +116,9 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_all(self, arg):
-        """ Print all string representations of all instaces based or not on the class name"""
+        """
+        Print all string reps of all instances based or not on the class name
+        """
 
         if not arg:
             print("** class name missing **")

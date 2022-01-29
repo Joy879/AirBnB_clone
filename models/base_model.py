@@ -35,7 +35,8 @@ class BaseModel():
         return class_name + "(" + self.id + ")" + str(dtn)
 
     def save(self):
-        """ Updates the public instance attribute updated_at with the current datetime
+        """
+        Updates public instance attribute updated_at with the current datetime
         """
         self.updated_at = datetime.now()
         storage.save()
