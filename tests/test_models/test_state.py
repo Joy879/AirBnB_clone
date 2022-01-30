@@ -47,11 +47,9 @@ class TestState(unittest.TestCase):
 
     def test_str(self):
         """ test to check the string representation """
-        self.s1.name = "California"
-        string = "[{}] ({}) {}".format(self.s1.__class__.__name__,
-                                       self.s1.id,
-                                       self.s1.__dict__)
-        self.assertEqual(str(self.s1), string)
+        base = State()
+        base_str = base.__str__()
+        self.assertTrue(isinstance(base_str, str))
 
     def test_format(self):
         """ test to check for time format """
