@@ -41,11 +41,9 @@ class TestReview(unittest.TestCase):
 
     def test_str(self):
         """ test to check the string representation """
-        self.r1.name = "5 Stars"
-        string = "[{}] ({}) {}".format(self.r1.__class__.__name__,
-                                       self.r1.id,
-                                       self.r1.__dict__)
-        self.assertEqual(str(self.r1), string)
+        base = Review()
+        base_str = base.__str__()
+        self.assertTrue(isinstance(base_str, str))
 
     def test_format(self):
         """ test to check for time format """
