@@ -7,10 +7,11 @@ import os
 
 
 class FileStorage:
-    """ serializes instances to a JSON file and deserializes JSON file to instances
     """
-        __file_path = "file.json"
-        __objects = {}
+    serializes instances to a JSON file and deserializes JSON file to instances
+    """
+    __file_path = "file.json"
+    __objects = {}
 
     def all(self):
         """ returns the dictionary __objects
@@ -34,7 +35,7 @@ class FileStorage:
             json.dump(dict, f)
 
     def reload(self):
-        """ deserializes the JSON file to dict __objects 
+        """deserializes the JSON file to dict __objects
         """
         from models.base_model import BaseModel
         from models.user import User
