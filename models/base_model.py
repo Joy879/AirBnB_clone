@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the class BaseModel
+Contain the class BaseModel
 """
 
 import uuid
