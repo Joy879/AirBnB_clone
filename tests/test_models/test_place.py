@@ -60,11 +60,9 @@ class TestPlace(unittest.TestCase):
 
     def test_str(self):
         """ test to check the string representation """
-        self.p1.name = "US"
-        string = "[{}] ({}) {}".format(self.p1.__class__.__name__,
-                                       self.p1.id,
-                                       self.p1.__dict__)
-        self.assertEqual(str(self.p1), string)
+        base = Place()
+        base_str = base.__str__()
+        self.assertTrue(isinstance(base_str, str))
 
     def test_format(self):
         """ test to check for time format """

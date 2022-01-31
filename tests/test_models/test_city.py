@@ -39,11 +39,9 @@ class TestCity(unittest.TestCase):
 
     def test_str(self):
         """ test to check the string representation """
-        self.c1.name = "San Francisco"
-        string = "[{}] ({}) {}".format(self.c1.__class__.__name__,
-                                       self.c1.id,
-                                       self.c1.__dict__)
-        self.assertEqual(str(self.c1), string)
+        base = City()
+        base_str = base.__str__()
+        self.assertTrue(isinstance(base_str, str))
 
     def test_format(self):
         """ test to check for time format """
