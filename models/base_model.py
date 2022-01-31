@@ -32,7 +32,7 @@ class BaseModel():
         """ Prints the string representation of the BaseModel
         """
         class_name = "[" + self.__class__.__name__ + "]"
-        dtn = {x: y for (x, y) in self.__dict__.items()}
+        dtn = {x: y for (x, y) in self.__dict__.items() if (not y) is False}
         return class_name + "(" + self.id + ")" + str(dtn)
 
     def save(self):
