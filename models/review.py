@@ -10,7 +10,3 @@ class Review(BaseModel):
     place_id = ""
     user_id = ""
     text = ""
-
-    def __init__(self):
-        """ initializes Review """
-        super(Review, self).__init__()
