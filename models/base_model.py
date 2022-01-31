@@ -8,7 +8,7 @@ from datetime import datetime
 from models import storage
 
 
-class BaseModel():
+class BaseModel:
     """ base model used for other classes
     """
 
