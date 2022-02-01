@@ -1,5 +1,8 @@
 # The Console: 0x00. AirBnB clone
 
+![65f4a1dd9c51265f49d0](https://user-images.githubusercontent.com/70502261/151993984-204d5d84-c703-434d-a23f-8855a7c6fdb2.png)
+
+
 ### Description
 
 This repository contains the first steps of the AirBnB clone project made for Holberton/ALX_Africa students. During this first part of the project we had to:
@@ -17,7 +20,7 @@ This repository contains the first steps of the AirBnB clone project made for Ho
 
 
 
-### Files and directories decription
+### Files and directories description
 
 | Directory | Description |
 |--|--|
